@@ -30,9 +30,9 @@ public class MyMain {
     // Checks to see if an array contains a geometric series
     public static boolean isGeometric(int[] arr) {
         
-        double factor = (double)(arr[1]/arr[0]);
-        for(int i = 2; i < arr.length; i++){
-            if ((double) arr[i]/arr[i-1] != factor){
+        double factor = (double)arr[1]/ (double)arr[0];
+        for(int i = 0; i < arr.length-1; i++){
+            if ((double)arr[i+1]/ (double)arr[i] != factor){
                 return false;
             }
         }
